@@ -1,45 +1,17 @@
-# ndocs [![Build Status](https://travis-ci.org/vikramcse/ndocs.svg?branch=master)](https://travis-ci.org/vikramcse/ndocs)
+# ndocs
 
-> My phenomenal module
+> A CLI tool for getting URL of node api
 
 
 ## Install
 
 ```
-$ npm install --save ndocs
+$ npm install -g ndocs
 ```
 
 
 ## Usage
 
 ```js
-const ndocs = require('ndocs');
-
-ndocs('unicorns');
-//=> 'unicorns & rainbows'
+ndocs index
 ```
-
-
-## API
-
-### ndocs(input, [options])
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
-
-
-## License
-
-MIT © [vikramcse](http://github.com/vikramcse)

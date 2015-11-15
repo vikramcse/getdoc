@@ -1,10 +1,11 @@
 'use strict';
 
 var https = require('https');
+var fs = require('fs');
 var Table = require('cli-table');
 var args = process.argv.slice(2);
 
-module.exports = function () {
+module.exports = function (arg) {
 	var basePath = 'https://nodejs.org/api/';
 
 	var parseJson = function (str, cb) {
@@ -34,12 +35,11 @@ module.exports = function () {
 			head: ['Content', 'link'], colWidths: [50, 50]
 		});
 
-		for(var i = 0; i < data.length; i++) {
+		for (var i = 0; i < data.length; i++) {
 			var item = data[i]
-			if(item.type === 'text') {
+			if (item.type === 'text') {
 				var t = item.text.replace(/[\[\]]+/g, '');
 				var textAndHtml = t.replace(')', '').split('(');
-				//console.log(textAndHtml[0] + " " + basePath + textAndHtml[1]);
 				table.push([textAndHtml[0], basePath + textAndHtml[1]]);
 			}
 		}
@@ -47,16 +47,17 @@ module.exports = function () {
 	};
 
 	var routes = function () {
-		if (args[0] === 'index') {
+		if (arg === 'index') {
 			// server index
 			parseJson('index', function (data) {
 				showIndex(data.desc);
 			});
 		} else {
-			// serve other
+			// Some Future Work
+			// Welcome PR's
 		}
 	};
 
 	routes();
 
-}();
+};

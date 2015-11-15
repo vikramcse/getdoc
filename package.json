@@ -1,37 +1,35 @@
 {
   "name": "ndocs",
-  "version": "0.0.0",
-  "description": "My phenomenal module",
+  "version": "1.0.0",
+  "description": "A CLI tool for getting URL of node api",
   "license": "MIT",
   "repository": "vikramcse/ndocs",
   "author": {
     "name": "vikramcse",
-    "email": "vikramcse.10@gmail.com",
-    "url": "github.com/vikramcse"
+    "email": "vikramcse.10@gmail.com"
   },
+  "bin": {
+    "ndocs": "execute-module.js"
+  },
+  "main": "index.js",
+  "preferGlobal": "true",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
     "test": "xo && ava"
   },
-  "files": [
-    "index.js"
-  ],
   "keywords": [
-    ""
+    "node",
+    "documentaion",
+    "terminal",
+    "cli"
   ],
   "dependencies": {
-    "chalk": "^1.1.1",
     "cli-table": "^0.3.1"
   },
   "devDependencies": {
     "ava": "^0.3.0",
     "xo": "^0.10.0"
-  },
-  "xo": {
-    "ignores": [
-      "test.js"
-    ]
   }
 }
