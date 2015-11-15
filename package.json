@@ -1,15 +1,15 @@
 {
-  "name": "ndocs",
+  "name": "getdoc",
   "version": "1.0.0",
   "description": "A CLI tool for getting URL of node api",
   "license": "MIT",
-  "repository": "vikramcse/ndocs",
+  "repository": "vikramcse/getdoc",
   "author": {
     "name": "vikramcse",
     "email": "vikramcse.10@gmail.com"
   },
   "bin": {
-    "ndocs": "execute-module.js"
+    "getdoc": "execute-module.js"
   },
   "main": "index.js",
   "preferGlobal": "true",
